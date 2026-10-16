@@ -321,10 +321,10 @@
   dependencies:
     eslint-scope "5.1.1"
 
-"@ons/design-system@^73.12.0":
-  version "73.12.0"
-  resolved "https://registry.yarnpkg.com/@ons/design-system/-/design-system-73.12.0.tgz#424a50daeac806570ca22a1a890194fc59c18d81"
-  integrity sha512-Xi8Cr15qUVA8XM63Gzb7X49qFv6N75hpGMwRJshUkJIgvQIYmqK9rnqwwGV5OryVu44zpU6TyCygOcm/bwGgTw==
+"@ons/design-system@^74.0.0-next.16":
+  version "74.0.0-widen.1"
+  resolved "https://registry.yarnpkg.com/@ons/design-system/-/design-system-74.0.0-widen.1.tgz#d408aa77f90bca968a58bdb1cd9b1332cd176817"
+  integrity sha512-Eyvh1NoX9HjAjOxlhr3hCVqfe5XhfLHfQ24wpDv0mOOnxA1xNedvFCryGv3cAY/1IuOHXMfEKcyPURQi+d9w0Q==
   dependencies:
     highcharts "12.1.2"
     pym.js "1.3.2"

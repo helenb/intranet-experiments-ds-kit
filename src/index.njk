@@ -6,20 +6,27 @@
         "oglLink": true
     }
 } %}
-{% block main %}
+{% block mainContent %}
     {% set groups = helpers.navigationHelper({
         "pages": prototypeListing,
         "ignorePaths": ["/"]
     }) %}
-    {% for group in groups %}
-        <section>
-            <h1 class="u-fs-m">{{ group.title }}</h1>
-            {{
-                onsList({
-                    "classes": "ons-list--bare",
-                    "itemsList": group.items
-                })
-            }}
-        </section>
-    {% endfor %}
+    <div class="ons-u-container ons-u-container--wide">
+    <div class="ons-grid">
+        <div class="ons-grid__col ons-col-4@m">
+            Demo of sidebar
+        </div>
+        <div class="ons-grid__col ons-col-8@m">
+            {% for group in groups %}
+                <section>
+                    <h1 class="u-fs-m">{{ group.title }}</h1>
+                    {{
+                        onsList({
+                            "classes": "ons-list--bare",
+                            "itemsList": group.items
+                        })
+                    }}
+                </section>
+            {% endfor %}
+        </div>
 {% endblock %}
