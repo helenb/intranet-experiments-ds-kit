@@ -7,17 +7,48 @@
         "oglLink": true
     }
 } %}
+
+
+{% block head %}
+    <link rel="stylesheet" href="/prototypes/example/styles.css"/>
+{% endblock %}
+
 {% block mainContent %}
     {% set groups = helpers.navigationHelper({
         "pages": prototypeListing,
         "ignorePaths": ["/"]
     }) %}
-    <div class="ons-u-container ons-u-container--wide">
     <div class="ons-grid">
         <div class="ons-grid__col ons-col-4@m">
-            Demo of sidebar
+            <h2>Demo of sidebar</h2>
+            {# Below is the table of contents html copied from https://service-manual.ons.gov.uk/design-system/components/table-of-contents#example.example-table-of-contents-single.html. The links don't actually work. #}
+
+            <aside class="ons-table-of-contents-container" aria-label="Table of contents">
+                <div role="region">
+                    <a class="ons-skip-to-content ons-u-fs-r--b" href="#0">Skip to guide content</a>
+                </div>
+                <nav class="ons-table-of-contents" aria-label="Pages in this guide">
+                    <h2 class="ons-table-of-contents__title ons-u-fs-r--b ons-u-mb-s">Contents</h2>
+                    <ul class="ons-list ons-u-mb-l ons-list--dashed">
+                        <li class="ons-list__item" aria-current="true"> Overview </li>
+                        <li class="ons-list__item">
+                            <a href="#0" class="ons-list__link">Who should take part and why</a>
+                        </li>
+                        <li class="ons-list__item">
+                            <a href="#0" class="ons-list__link">How your information is used</a>
+                        </li>
+                        <li class="ons-list__item">
+                            <a href="#0" class="ons-list__link">The 2019 Census Rehearsal</a>
+                        </li>
+                        <li class="ons-list__item">
+                            <a href="#0" class="ons-list__link">Online census</a>
+                        </li>
+                    </ul>
+                </nav>
+            </aside>
         </div>
         <div class="ons-grid__col ons-col-8@m">
+            {# This is code that came out of the box with the prototype. It links through to other pages which are in the prototype/example folder e.g. age.njk #}
             {% for group in groups %}
                 <section>
                     <h1 class="u-fs-m">{{ group.title }}</h1>
@@ -30,4 +61,5 @@
                 </section>
             {% endfor %}
         </div>
+    </div>
 {% endblock %}

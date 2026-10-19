@@ -14,6 +14,7 @@ layout: example/views/_main
 
 {% block mainContent %}
     <h1>What is your name?</h1>
+    {# https://service-manual.ons.gov.uk/design-system/components/input #}
     {{
         onsInput({
             "id": "first-name",
@@ -32,6 +33,8 @@ layout: example/views/_main
             }
         })
     }}
+
+    {# https://service-manual.ons.gov.uk/design-system/components/button #}
     {{
         onsButton({
             "text": "Save and continue",
